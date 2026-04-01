@@ -24,6 +24,35 @@ Each technology in this stack becomes more powerful with AI assistance:
 
 ---
 
+## Theming
+
+All colors, radius, and surface tokens are CSS custom properties in `app/globals.css`. Change them once and the entire app rethemes — light and dark mode both update.
+
+### Recommended workflow
+
+1. Open the [Shadcn theme builder](https://ui.shadcn.com/create) and design your theme visually using the controls (Style, Base Color, Theme, Radius, etc.)
+2. Copy the `--preset` code shown at the bottom left of the panel
+3. Run the CLI command to apply it to this project:
+
+```bash
+npx shadcn@latest init --preset <code>
+```
+
+This rewrites the CSS variables in `app/globals.css` to match your chosen theme — light and dark mode both update automatically.
+
+### Key variables
+
+| Variable | Effect |
+|---|---|
+| `--primary` | Buttons, active states |
+| `--background` / `--foreground` | Page background and text |
+| `--radius` | All border radii app-wide (one value scales everything) |
+| `--muted` / `--accent` | Secondary surfaces, hover states |
+
+You can also browse ready-made presets at [ui.shadcn.com/themes](https://ui.shadcn.com/themes) and copy those instead.
+
+---
+
 ## Shadcn Components
 
 Shadcn/ui components are added to your project individually — you own the source code in `components/ui/`. Browse the full component catalog here:
